@@ -2,7 +2,6 @@ final pixelZoom:Float = 6.0;
 final yAdjust = -50;
 
 function onCreatePost() {
-
     introSoundsSuffix = "-pixel";
 	for (i in [boyfriendGroup, dadGroup]) {
 		for (j in i.members)
@@ -14,7 +13,6 @@ function onCreatePost() {
 
 	countdownPrefix = 'pixelUI/';
     
-
 	playHUD.comboTween = false;
 
 	playHUD.ratingPrefix = 'pixelUI/ratings/';
@@ -36,7 +34,6 @@ function onPopUpScorePost(note, ratingData, rating, numGroup) {
 }
 
 function onCountdownTick(tick) {
-    
 	if (tick >= 1 && tick <= 3) {
 		final spr = switch (tick) {
 			case 1:
