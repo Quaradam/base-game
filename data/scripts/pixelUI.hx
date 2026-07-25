@@ -2,6 +2,8 @@ final pixelZoom:Float = 6.0;
 final yAdjust = -50;
 
 function onCreatePost() {
+
+    introSoundsSuffix = "-pixel";
 	for (i in [boyfriendGroup, dadGroup]) {
 		for (j in i.members)
 			j.camDisplacement = 10;
@@ -11,6 +13,7 @@ function onCreatePost() {
 	FlxG.usePixelPerfectRendering = true;
 
 	countdownPrefix = 'pixelUI/';
+    
 
 	playHUD.comboTween = false;
 
@@ -33,6 +36,7 @@ function onPopUpScorePost(note, ratingData, rating, numGroup) {
 }
 
 function onCountdownTick(tick) {
+    
 	if (tick >= 1 && tick <= 3) {
 		final spr = switch (tick) {
 			case 1:
